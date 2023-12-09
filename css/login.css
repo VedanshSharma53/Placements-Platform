@@ -1,0 +1,50 @@
+/* Default styles */
+* {
+    font-size: 20px;
+}
+
+.remember {
+    transform: scale(1.2);
+}
+
+.forgotpass {
+    margin-left: 400px;
+}
+
+.btn {
+    width: 100%;
+}
+
+.icon-img {
+    margin-top: 30px;
+    width: 40%;
+    float: left;
+    height: 80vh;
+    border-radius: 20px;
+    border: 2px solid snow;
+    transition: transform 0.5s;
+}
+
+.icon-img:hover {
+    transform: scale(1.1);
+}
+
+.body {
+    width: 60%;
+    float: right;
+}
+
+
+@media screen and (max-width: 992px) {
+    .body {
+        width: 100%;
+        float: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .forgotpass {
+        margin-left:0;
+}
+}
+

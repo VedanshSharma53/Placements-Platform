@@ -1,0 +1,108 @@
+.body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.bg {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.bg-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    position: relative;
+   
+}
+
+.moving-message {
+    flex: 1;
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: moveMessage 10s linear infinite; 
+}
+
+.message {
+    background-color: rgb(240, 42, 42);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.icon img:hover {
+    transform: scale(1.1);
+}
+
+.analysis {
+    z-index: 1;
+    width: 400px; 
+    background-color: #f0f0f0;
+    
+}
+
+.details {
+    flex: 1;
+    margin-top: 20px; 
+}
+
+.details h3 {
+    margin: 10px 0;
+}
+
+.upload {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.upload button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.upload button:hover {
+    background-color: #2980b9;
+}
+
+@keyframes moveMessage {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333; 
+    text-align: center;
+    margin-bottom: 20px; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    line-height:1.2;
+}

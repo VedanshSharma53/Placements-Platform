@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/student.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <div class="bg">
+        <div class="bg-container">
+            <div class="header">
+                <h1>Student Profile</h1>
+                <div class="moving-message">
+                    <p class="message"><b>NOTE:</b>You have an interview scheduled at 12th Dec,2023 at MLRIT Placement Campus</p>
+                </div>
+            </div>
+            <div class="content-container">
+                <div class="icon">
+                    <img src="img/profile.jpg" alt="Icon"></img>
+                </div>
+                <div class="analysis">
+                    <div id="piechart" style="width: 400px; height: 250px;"></div>
+                </div>
+            </div>
+            <div class="details">
+                <h3>Name         : John</h3>
+                <h3>Roll number  : 22r21a05b3</h3>
+                <h3>Academic year: IInd year</h3>
+                <h3>Gender       : Male</h3>
+            </div>
+            <div class="upload">
+                <input type="file" id="resumeInput" style="display: none;" accept=".pdf, .doc, .docx">
+                <button onclick="uploadFile('resumeInput')">Upload Resume</button>
+
+                <input type="file" id="cvInput" style="display: none;" accept=".pdf, .doc, .docx">
+                <button onclick="uploadFile('cvInput')">Upload CV</button>
+            </div>
+
+        </div>
+    </div>
+
+ 
+    <script type="text/javascript">
+       google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawSkillsChart);
+
+function drawSkillsChart() {
+    var data = google.visualization.arrayToDataTable([
+        ['Language', 'Percentage'],
+        ['JavaScript', 80],
+        ['HTML/CSS', 75],
+        ['Python', 70],
+        ['Java', 60],
+        ['C++', 50]
+    ]);
+    var options = {
+        title: 'My Coding Skills',
+        pieHole: 0.4,
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+    chart.draw(data, options);
+}
+
+function uploadFile(inputId) {
+    var fileInput = document.getElementById(inputId);
+    fileInput.click();
+
+    fileInput.addEventListener('change', function() {
+        var file = fileInput.files[0];
+        if (file) {
+            alert('File uploaded: ' + file.name);
+        }
+    });
+}
+
+    </script>
+
+</body>
+</html>
