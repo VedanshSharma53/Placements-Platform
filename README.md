@@ -5,4 +5,4 @@ A placement platform made by the team - "404 BRAIN NOT FOUND" as a problem state
 Access the website: https://vedanshsharma53.github.io/Placements-Platform/
 
 
-Contributers: https://github.com/RiteshBiradar
+Contributers: Ritesh Biradar - https://github.com/RiteshBiradar
